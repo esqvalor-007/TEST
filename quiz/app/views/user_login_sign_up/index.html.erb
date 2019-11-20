@@ -1,0 +1,17 @@
+<h1>Hello, Guests!</h1>
+
+<div class= "WelcomeController">
+  <h1>Log in</h1>
+  <%= form_tag(:action => 'login_attempt') do %>
+    <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p> 
+    <p>Password:</br> <%= password_field_tag :login_password %></p> 
+    <%= submit_tag("Log In") %>
+  <% end %>
+</div>
+  
+
+<div class="submit formRow"><input name="SignUp" type="submit" value="Sign Up" class="submit-button primary"></div> 
+	<input name="SignUp" type="submit" value="Sign Up" class="submit-button primary">
+	
+<%= link_to "http://www.facebook.com/mypage", target: :_blank do %>
+<% end %>

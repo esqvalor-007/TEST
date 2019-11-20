@@ -1,0 +1,30 @@
+*** Test Cases *** 
+001_User able to login
+    Given UserName [Happy] Password [Test12345] 
+    When Trigger the login button
+    Then User has a successful login
+	
+002_User not able to login when password is incorrect
+    Given UserName [Happy] Password [incorrect_pass] 
+    When Trigger the login button
+    Then User did not login on the page
+	
+003_User not able to login when username is incorrect
+    Given UserName [incorrect_username] Password [Test12345] 
+    When Trigger the login button
+    Then User did not login on the page
+	
+004_User able to create a blog
+    Given UserName [Happy] Password [Test12345] and Blog Details [This is blog test]
+    When Create Blog
+    Then User able to create new blog [This is blog test]
+	
+005_User able to comment on a blog
+    Given UserName [Happy] Password [Test12345] and Blog Details [This is blog test]
+    When Comment On Posted Blog
+    Then User able to comment on blog [This is comment]
+	
+006_Guest able to view the post on a blog
+    Given Guest User [User1]
+    When View Blog [Blog-0001]
+    Then Guest able to view blog [Blog-0001]
